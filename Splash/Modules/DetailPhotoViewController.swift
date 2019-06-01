@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailPhotoViewController.swift
 //  Splash
 //
 //  Created by Артем Рябцев on 6/1/19.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class DetailPhotoViewController: UIViewController {
+    var presenter: DetailPhotoPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
 }
 
+extension DetailPhotoViewController: BaseView {
+    
+}
