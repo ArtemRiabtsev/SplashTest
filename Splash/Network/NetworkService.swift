@@ -22,13 +22,15 @@ extension NetworkService {
     
     func load<T: Codable>(_ request: URLRequest, completion: @escaping (Either<T>) -> Void) {
         
-        session.dataTask(with: request) { (data, nil, error) in
+        session.dataTask(with: request) { (data, response, error) in
+            
             if let error = error {
                 completion(.error(.custom(error.localizedDescription)))
             }
             do {
                 guard let data = data else { return }
                 let value = try JSONDecoder().decode(T.self, from: data)
+                
                 completion(Either.success(value))
             } catch {
                 completion(.error(.jsonDecode))

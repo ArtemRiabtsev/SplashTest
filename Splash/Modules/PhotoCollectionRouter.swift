@@ -13,7 +13,11 @@ class PhotoCollectionRouter: BaseRouter<PhotoCollectionViewController> {
 }
 
 extension PhotoCollectionRouter {
-    func toDetailPhoto() {
-//        guard let detailViewController = instantiateViewController(from: .main, with: .detailPhoto) else { return }
+    func toDetailPhoto(_ urlString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let detailPhotoViewController = instantiateViewController(from: .main, with: .detailPhoto) as? DetailPhotoViewController else { return }
+            DetailPhotoConfigurator().configure(view: detailPhotoViewController, with: urlString)
+            self?.view?.navigationController?.pushViewController(detailPhotoViewController, animated: true)
+        }
     }
 }

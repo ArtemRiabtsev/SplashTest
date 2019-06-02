@@ -9,13 +9,16 @@
 import Foundation
 
 protocol DetailPhotoPresenter {
-    
+    var urlString: String? { get set }
+    func printCuctom()
 }
 
 class DetailPhotoPresenterImpl: BasePresenter<DetailPhotoViewController, DetailPhotoRouter> {
-    
+    var urlString: String?
 }
 
-extension DetailPhotoPresenterImpl {
-    
+extension DetailPhotoPresenterImpl: DetailPhotoPresenter {
+    func printCuctom() {
+        print("SOMEPRINT")
+    }
 }

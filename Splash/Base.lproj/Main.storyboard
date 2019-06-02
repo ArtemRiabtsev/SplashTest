@@ -67,23 +67,70 @@
                                     <outlet property="delegate" destination="959-95-XjG" id="GcL-uR-pQQ"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nW2-hM-eyn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="iPV-Oa-a3S"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fz6-gZ-ZtE" firstAttribute="trailing" secondItem="bVn-CA-ISO" secondAttribute="trailing" id="FAd-QO-Mvj"/>
-                            <constraint firstItem="bVn-CA-ISO" firstAttribute="top" secondItem="fz6-gZ-ZtE" secondAttribute="top" id="Mn7-cK-JvO"/>
+                            <constraint firstItem="nW2-hM-eyn" firstAttribute="leading" secondItem="fz6-gZ-ZtE" secondAttribute="leading" id="Ja1-Fu-4QH"/>
+                            <constraint firstItem="nW2-hM-eyn" firstAttribute="top" secondItem="fz6-gZ-ZtE" secondAttribute="top" id="On8-Hs-svX"/>
                             <constraint firstItem="fz6-gZ-ZtE" firstAttribute="bottom" secondItem="bVn-CA-ISO" secondAttribute="bottom" id="dkH-7f-E8v"/>
                             <constraint firstItem="bVn-CA-ISO" firstAttribute="leading" secondItem="fz6-gZ-ZtE" secondAttribute="leading" id="eHK-OX-ZUb"/>
+                            <constraint firstItem="nW2-hM-eyn" firstAttribute="trailing" secondItem="fz6-gZ-ZtE" secondAttribute="trailing" id="ocm-vX-N3v"/>
+                            <constraint firstItem="bVn-CA-ISO" firstAttribute="top" secondItem="nW2-hM-eyn" secondAttribute="bottom" id="zZS-Y0-FFa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fz6-gZ-ZtE"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="bVn-CA-ISO" id="QZe-6U-sFw"/>
+                        <outlet property="menuConstantHeight" destination="iPV-Oa-a3S" id="sQ5-b1-YvL"/>
+                        <outlet property="searchBar" destination="nW2-hM-eyn" id="Ryy-iV-3s5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0n2-0L-HsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2710.144927536232" y="140.625"/>
+        </scene>
+        <!--Detail Photo View Controller-->
+        <scene sceneID="f6x-fz-sii">
+            <objects>
+                <viewController storyboardIdentifier="DetailPhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wre-bf-rZr" customClass="DetailPhotoViewController" customModule="Splash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ag8-59-Urz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sp5-Zd-7Is">
+                                <rect key="frame" x="189" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-gF-oaJ" customClass="BWPImageView" customModule="Splash" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZCP-7n-eSA" firstAttribute="bottom" secondItem="ZTQ-gF-oaJ" secondAttribute="bottom" id="AIE-62-Hca"/>
+                            <constraint firstItem="ZTQ-gF-oaJ" firstAttribute="centerX" secondItem="ag8-59-Urz" secondAttribute="centerX" id="Lsa-sT-WaP"/>
+                            <constraint firstItem="ZCP-7n-eSA" firstAttribute="trailing" secondItem="ZTQ-gF-oaJ" secondAttribute="trailing" id="hEY-DT-nJU"/>
+                            <constraint firstItem="ZTQ-gF-oaJ" firstAttribute="top" secondItem="ZCP-7n-eSA" secondAttribute="top" id="kwY-fe-bk5"/>
+                            <constraint firstItem="ZTQ-gF-oaJ" firstAttribute="leading" secondItem="ZCP-7n-eSA" secondAttribute="leading" id="wcD-0g-0J8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZCP-7n-eSA"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZTQ-gF-oaJ" id="cgy-zs-kon"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9b-xx-Ko3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3456" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OC8-Wr-lvJ">

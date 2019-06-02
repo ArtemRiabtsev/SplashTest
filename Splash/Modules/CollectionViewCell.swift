@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     static let cellId = "CollectionViewCell"
-    @IBOutlet weak var imageView: BWPImageView!
+    @IBOutlet private weak var imageView: BWPImageView!
     var urlString: String = "" {
         didSet {
             imageView.loadImage(urlString: urlString)

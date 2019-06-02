@@ -13,5 +13,5 @@ class DetailPhotoRouter: BaseRouter<DetailPhotoViewController> {
 }
 
 extension DetailPhotoRouter {
-    
+
 }

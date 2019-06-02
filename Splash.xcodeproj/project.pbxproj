@@ -42,6 +42,9 @@
 		F4A76C2C22A284AF009E38DE /* BWPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A76C2A22A284AF009E38DE /* BWPImageView.swift */; };
 		F4A76C2D22A284AF009E38DE /* BWPImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A76C2B22A284AF009E38DE /* BWPImageCacheItem.swift */; };
 		F4A76C2F22A289AB009E38DE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A76C2E22A289AB009E38DE /* UIView.swift */; };
+		F4A76C3222A40103009E38DE /* LoadFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A76C3022A40103009E38DE /* LoadFooterView.swift */; };
+		F4A76C3322A40103009E38DE /* LoadFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A76C3122A40103009E38DE /* LoadFooterView.xib */; };
+		F4A76C3522A4236B009E38DE /* DetailPhotoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A76C3422A4236B009E38DE /* DetailPhotoConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		F4A76C2A22A284AF009E38DE /* BWPImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWPImageView.swift; sourceTree = "<group>"; };
 		F4A76C2B22A284AF009E38DE /* BWPImageCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWPImageCacheItem.swift; sourceTree = "<group>"; };
 		F4A76C2E22A289AB009E38DE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F4A76C3022A40103009E38DE /* LoadFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFooterView.swift; sourceTree = "<group>"; };
+		F4A76C3122A40103009E38DE /* LoadFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadFooterView.xib; sourceTree = "<group>"; };
+		F4A76C3422A4236B009E38DE /* DetailPhotoConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 			children = (
 				F4A76C0422A251C8009E38DE /* DetailPhotoViewController.swift */,
 				F4A76C0622A251DA009E38DE /* DetailPhotoPresenter.swift */,
+				F4A76C3422A4236B009E38DE /* DetailPhotoConfigurator.swift */,
 				F4A76C0822A251EE009E38DE /* DetailPhotoRouter.swift */,
 			);
 			name = DetailPhoto;
@@ -249,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				F4A76C2A22A284AF009E38DE /* BWPImageView.swift */,
+				F4A76C3022A40103009E38DE /* LoadFooterView.swift */,
+				F4A76C3122A40103009E38DE /* LoadFooterView.xib */,
 				F4A76C2622A2842F009E38DE /* CollectionViewCell.swift */,
 				F4A76C2722A2842F009E38DE /* CollectionViewCell.xib */,
 			);
@@ -266,7 +275,6 @@
 				F4A76BCA22A23A70009E38DE /* Sources */,
 				F4A76BCB22A23A70009E38DE /* Frameworks */,
 				F4A76BCC22A23A70009E38DE /* Resources */,
-				2C2AF859307465A6AEE38F6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A76C3322A40103009E38DE /* LoadFooterView.xib in Resources */,
 				F4A76BDC22A23A73009E38DE /* LaunchScreen.storyboard in Resources */,
 				F4A76BD922A23A73009E38DE /* Assets.xcassets in Resources */,
 				F4A76C2922A2842F009E38DE /* CollectionViewCell.xib in Resources */,
@@ -325,23 +334,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C2AF859307465A6AEE38F6C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Splash/Pods-Splash-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Splash/Pods-Splash-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Splash/Pods-Splash-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		509DC806D877F078674AC4B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,9 +371,11 @@
 				F4A76BFE22A24E98009E38DE /* PhotoCollectionRouter.swift in Sources */,
 				F4A76BF722A246F5009E38DE /* UIIdentifier.swift in Sources */,
 				F4A76C2222A27ED6009E38DE /* PhotoCollectionConfigurator.swift in Sources */,
+				F4A76C3522A4236B009E38DE /* DetailPhotoConfigurator.swift in Sources */,
 				F4A76C2C22A284AF009E38DE /* BWPImageView.swift in Sources */,
 				F4A76C1E22A27B33009E38DE /* SearchObjc.swift in Sources */,
 				F4A76C2F22A289AB009E38DE /* UIView.swift in Sources */,
+				F4A76C3222A40103009E38DE /* LoadFooterView.swift in Sources */,
 				F4A76C1522A26937009E38DE /* Endpoint.swift in Sources */,
 				F4A76BD422A23A70009E38DE /* SplashViewController.swift in Sources */,
 				F4A76C1A22A27A75009E38DE /* Photo.swift in Sources */,

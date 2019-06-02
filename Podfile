@@ -8,5 +8,5 @@ target 'Splash' do
   # Pods for Splash
   #pod 'Alamofire', '~> 5.0.0-beta.5'
   #pod 'SwiftKeychainWrapper'
-  pod 'ReachabilitySwift'
+  #pod 'ReachabilitySwift'
 end
